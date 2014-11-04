@@ -15,9 +15,20 @@
     <meta name="if:Show Search On Sidebar" content="1" />
     <meta name="if:Show Twitter On Sidebar" content="1" />
     <meta name="if:Snow Mode" content="0" />
+    <meta name="if:Show Following" content="0" />
     
     <meta name="font:Body" content="'Source Sans Pro'"/>
-	
+    <meta name="color:Text" content="#357BD3"/>
+    <meta name="color:Photo" content="#34888B"/>
+    <meta name="color:Photoset" content="#DE4F20"/>
+    <meta name="color:Panorama" content="#9D4E5F"/>
+    <meta name="color:Link" content="#49AF66"/>
+    <meta name="color:Quote" content="#DB8C2D"/>
+    <meta name="color:Chat" content="#FBFA55"/>
+    <meta name="color:Video" content="#75933d"/>
+    <meta name="text:Follow Label" content="Follow Me"/>	
+	<meta name="text:Ask Me Label" content="Ask Me Anything"/>
+	<meta name="text:Submit Post Label" content="Submit Something"/>
 	<!-- social icons -->
 	<meta name="text:Facebook URL" content=""/>	
 	<meta name="text:LinkedIn URL" content=""/>	
@@ -1140,7 +1151,7 @@ body:after {
 			display: table;
 			table-layout: fixed;
 			overflow: hidden;
-			background-color: #DE4F20;
+			background-color: {color:Photoset};
 		}
 		
 		.page .photoset-inner {
@@ -1206,19 +1217,19 @@ body:after {
 		}
 		
 		.photoset .reblogged, .photoset .photoscontrol a {
-			background-color: #DE4F20;
+			background-color: {color:Photoset};
 		}
 		
 		.photoset .date.date>a, .photoset a:hover {
-			color: #DE4F20;
+			color: {color:Photoset};
 		}
 		
 		.photoset.photoset.photoset .entry {
-			border-color: #DE4F20;
+			border-color: {color:Photoset};
 		}
 		
 		.photoset .reblogged:before, .photoset .reblogged:after {
-			border-top-color: #DE4F20;
+			border-top-color: {color:Photoset};
 		}
 		
 		.photoset .date>a:before {
@@ -1226,25 +1237,25 @@ body:after {
 		}
 		
 		.photoset-notes a {
-			color: #DE4F20;
+			color: {color:Photoset};
 		}
 		
 		/* photo style */
 		
 		.photo .reblogged, .photo .photoscontrol a {
-			background-color: #34888B;
+			background-color: {color:Photo};
 		}
 		
 		.photo .date.date>a, .photo a:hover {
-			color: #34888B;
+			color: {color:Photo};
 		}
 		
 		.photo.photo.photo .entry {
-			border-color: #34888B;
+			border-color: {color:Photo};
 		}
 		
 		.photo .reblogged:before, .photo .reblogged:after {
-			border-top-color: #34888B;
+			border-top-color: {color:Photo};
 		}
 		
 		.photo .date>a:before {
@@ -1252,7 +1263,7 @@ body:after {
 		}
 		
 		.photo-notes a {
-			color: #34888B;
+			color: {color:Photo};
 		}
 		
 		/* text post style */
@@ -1346,15 +1357,15 @@ body:after {
 		}
 		
 		.text .reblogged {
-			background-color: #357BD3;
+			background-color: {color:Text};
 		}
 		
 		.text .reblogged:before, .text .reblogged:after {
-			border-top-color: #357BD3;
+			border-top-color: {color:Text};
 		}
 		
 		.text a:hover, .text .date.date>a {
-			color: #357BD3;
+			color: {color:Text};
 		}
 		
 		.text .date>a:before {
@@ -1362,7 +1373,7 @@ body:after {
 		}
 		
 		.text-notes a {
-			color: #357BD3;
+			color: {color:Text};
 		}
 		
 		.img-set {
@@ -1457,8 +1468,8 @@ body:after {
 		/* link post style */
 		
 		.link .entry {
-			background: #49AF66;
-			border-bottom: 2px solid #49AF66;
+			background: {color:Link};
+			border-bottom: 2px solid {color:Link};
 			display: table;
 			width: 101%;
 			table-layout: fixed;
@@ -1503,7 +1514,7 @@ body:after {
 		} 
 		
 		.link .photoscontrol a {
-			background-color: #49AF66;
+			background-color: {color:Link};
 			color: #ddd;
 		}
 		
@@ -1512,11 +1523,11 @@ body:after {
 		}
 		
 		.link .date.date>a, .link a:hover {
-			color: #49AF66;
+			color: {color:Link};
 		}
 		
 		.link.link.link .entry {
-			border-color: #49AF66;
+			border-color: {color:Link};
 		}
 		
 		.link .reblogged:before, .link .reblogged:after {
@@ -1532,7 +1543,7 @@ body:after {
 		}
 		
 		.link-notes a {
-			color: #49AF66;
+			color: {color:Link};
 		}
 		
 		/* quote post style */
@@ -1563,19 +1574,19 @@ body:after {
 		}
 		
 		.quote .reblogged, .quote .photoscontrol a {
-			background-color: #DB8C2D;
+			background-color: {color:Quote};
 		}
 		
 		.quote .date.date>a, .quote a:hover {
-			color: #DB8C2D;
+			color: {color:Quote};
 		}
 		
 		.quote.quote.quote .entry {
-			border-color: #DB8C2D;
+			border-color: {color:Quote};
 		}
 		
 		.quote .reblogged:before, .quote .reblogged:after {
-			border-top-color: #DB8C2D;
+			border-top-color: {color:Quote};
 		}
 		
 		.quote .date>a:before {
@@ -1583,7 +1594,7 @@ body:after {
 		}
 		
 		.quote-notes a {
-			color: #DB8C2D;
+			color: {color:Quote};
 		}
 		
 		/* Panorama */
@@ -1612,7 +1623,7 @@ body:after {
 				float: left;
 				height: 100%;
 				padding: 0;
-				border-right: 2px solid #9D4E5F;
+				border-right: 2px solid {color:Panorama};
 			}
 			
 			.index .panorama .post-meta {
@@ -1696,19 +1707,19 @@ body:after {
 		}
 		
 		.panorama .reblogged, .panorama .photoscontrol a {
-			background-color: #9D4E5F;
+			background-color: {color:Panorama};
 		}
 		
 		.panorama .date.date>a, .panorama a:hover {
-			color: #9D4E5F;
+			color: {color:Panorama};
 		}
 		
 		.panorama.panorama.panorama .entry {
-			border-color: #9D4E5F;
+			border-color: {color:Panorama};
 		}
 		
 		.panorama .reblogged:before, .panorama .reblogged:after {
-			border-top-color: #9D4E5F;
+			border-top-color: {color:Panorama};
 		}
 		
 		.panorama .date>a:before {
@@ -1716,25 +1727,25 @@ body:after {
 		}
 		
 		.panorama-notes a {
-			color: #9D4E5F;
+			color: {color:Panorama};
 		}
 		
 		/* chat post styles F4F353*/
 		
 		.chat .reblogged, .chat .photoscontrol a {
-			background-color: #FBFA55;
+			background-color: {color:Chat};
 		}
 		
 		.chat .date.date>a, .chat a:hover {
-			color: #FBFA55;
+			color: {color:Chat};
 		}
 		
 		.chat.chat.chat .entry {
-			border-color: #FBFA55;
+			border-color: {color:Chat};
 		}
 		
 		.chat .reblogged:before, .chat .reblogged:after {
-			border-top-color: #FBFA55;
+			border-top-color: {color:Chat};
 		}
 		
 		.chat .date>a:before {
@@ -1760,26 +1771,26 @@ body:after {
 		}
 		
 		.chat-notes a {
-			color: #FBFA55;
+			color: {color:Chat};
 		}
 		
 		/* video post styles */
 		
 		.video .reblogged, .video .photoscontrol a,
 		.audio .reblogged, .audio .photoscontrol a {
-			background-color: #75933d;
+			background-color: {color:Video};
 		}
 		
 		.video .date.date>a, .video a:hover, .audio .date.date>a, .audio a:hover {
-			color: #75933d;
+			color: {color:Video};
 		}
 		
 		.video.video.video .entry, .audio.audio.audio .entry {
-			border-color: #75933d;
+			border-color: {color:Video};
 		}
 		
 		.video .reblogged:before, .video .reblogged:after, .audio .reblogged:before, .audio .reblogged:after {
-			border-top-color: #75933d;
+			border-top-color: {color:Video};
 		}
 		
 		.video .date>a:before {
@@ -1787,7 +1798,7 @@ body:after {
 		}
 		
 		.video-notes a {
-			color: #75933d;
+			color: {color:Video};
 		}
 		
 		/* audio post styles */
@@ -1826,7 +1837,7 @@ body:after {
 		}
 		
 		.audio-notes a {
-			color: #75933d;
+			color: {color:Video};
 		}
 		
 		/* question post styles */
@@ -2094,36 +2105,27 @@ body:after {
 			
               <ul class="nav">
                
-                {block:English}
+                
                   <li>
                     <a href="http://tumblr.com/follow/{Name}">
-                      Follow
+                      {text:Follow Text}
                     </a>
                   </li>
-                {/block:English}
-
-                {block:NotEnglish}
-                <li>
-                  <a href="http://tumblr.com/follow/{Name}">{lang:Follow me}</a>
-                </li>
-                {/block:NotEnglish}
 
                 
-                <li>
-                  <a href="/archive">{lang:Archive}</a>
-                </li>
+                
                 
                 {block:AskEnabled}
                 
                 <li>
-                  <a href="/ask">Ask Me Anything</a>
+                  <a href="/ask">{text:Follow Label}</a>
                 </li>
                 {/block:AskEnabled}
 
                 {block:SubmissionsEnabled}
               
                 <li>
-                  <a href="/submit">Submit Something</a>
+                  <a href="/submit">{text:Submit Post Label}</a>
                 </li>
                 {/block:SubmissionsEnabled} 
 
@@ -2133,6 +2135,10 @@ body:after {
                   <a href="{URL}">{Label}</a>
                 </li>
                 {/block:Pages}
+                
+                <li>
+                  <a href="/archive">{lang:Archive}</a>
+                </li>
               </ul>
     
               
@@ -2222,6 +2228,7 @@ body:after {
 		
 		{/block:ifInstagramUserID}
 		
+		{block:ifShowFollowing}
 		{block:Following}
 		<div class="following-cloud">
 		    <h2 class="sidebar-title">Blogs I follow</h2>
@@ -2233,6 +2240,7 @@ body:after {
 		    </ul>
 		</div>
 		{/block:Following}
+		{/block:ifShowFollowing}
 		
 		
 	</div>
@@ -2692,7 +2700,7 @@ body:after {
 
     <script src="http://static.tumblr.com/ynbk9vz/nN6neivkz/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/1HKm6e0ok/bootstrap.min.js"></script> 
-<script src="http://static.tumblr.com/ynbk9vz/Ipnnej1rn/scripts.js"></script>
+<script src="http://static.tumblr.com/ynbk9vz/hN4nejdyy/scripts.js"></script>
     <script>
 	    $(function() {
  $( "#showRightPush" ).click(function() {
