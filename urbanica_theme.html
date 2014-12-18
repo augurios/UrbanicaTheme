@@ -26,8 +26,7 @@
     <meta name="color:Quote" content="#DB8C2D"/>
     <meta name="color:Chat" content="#FBFA55"/>
     <meta name="color:Video" content="#75933d"/>
-    <meta name="text:Follow Label" content="Follow Me"/>	
-	<meta name="text:Ask Me Label" content="Ask Me Anything"/>
+    <meta name="text:Follow Label" content="Follow Me"/>
 	<meta name="text:Submit Post Label" content="Submit Something"/>
 	<!-- social icons -->
 	<meta name="text:Facebook URL" content=""/>	
@@ -66,16 +65,6 @@
     <link href="http://static.tumblr.com/ynbk9vz/WlYnehfm4/font-awesome.css" rel="stylesheet">
 	
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-	
-	<link href='http://development.spinaestudio.com/static/urbanica.css' rel='stylesheet' type='text/css'>
-	
-	
-    
-
-    {block:IfApplicationStylesheetURL}
-    <!-- Import application styling -->
-    <link href="{text:Application Stylesheet URL}" rel="stylesheet">
-    {/block:IfApplicationStylesheetURL}
  
     <style type="text/css">
     /* Preload images */
@@ -488,7 +477,7 @@ body:after {
       	}
       	
       	.navbar .brand {
-	      	padding: 13px 20px 12px;
+	      	padding: 19px 20px 12px;
 			font-size: 24px;
 			font-weight: 200;
 			line-height: 36px;
@@ -533,6 +522,7 @@ body:after {
       	.avatarlog {
 	      	float: left;
 	      	margin-right: 24px;
+	      	margin-top: 5px;
       	}
       	
       	@media (max-width:540px) {
@@ -817,7 +807,7 @@ body:after {
 	    	z-index: 9999;
 	    	position: relative;
 	    	float: right;
-	    	margin-top: 15px;
+	    	margin-top: 24px;
 	    	margin-right: 14px;
 		}
 		
@@ -1824,6 +1814,10 @@ body:after {
 			height: 80px;
 		}
 		
+		.audio .caption {
+			max-height: 120px;
+		}
+		
 		.page .audio .entry {
 			height: auto;
 		}
@@ -1847,20 +1841,37 @@ body:after {
 		}
 		
 		.QUOTEINFO .TEXT {
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 22px;
+			line-height: 1.5;
 			margin-bottom: 4px;
 			font-style: italic;
+		}
+		
+		.answer img {
+			float: left;
+			margin: 0 15px 15px 0;
+		}
+		
+		.answer .question > strong, .answer .RESPONSE > strong {
+			display: block;
 		}
 		
 		.page .QUOTEINFO .TEXT {
 			margin: 0 10% 4px;
 		}
 		
-		
+		.answer .BREAK {
+			height: 1px;
+			background: rgba(255,255,255,0.1);
+			margin: 15px 0;
+		}
 		.RESPONSE {
 			font-size: 18px;
-			margin-top: 24px;
+		}
+		
+		
+		.page .RESPONSER {
+			margin: 0 10% 4px;
 		}
 		
 		.reblogged {
@@ -1938,13 +1949,39 @@ body:after {
 			background-size: cover;
 			color: #fff;
 			text-shadow: 0px 0px 5px rgba(0,0,0,0.9);
+			position: relative;
 		}
 		
 		.hero-unit h1 {
-			font-weight: 100;
+			font-weight: 400;
 			font-size: 72px;
 			line-height: 1.5;
+			position: relative;
+			z-index: 1;
+			text-shadow: 0 0px 10px #000;
 		}
+		
+		.hero-unit p {
+			position: relative;
+			z-index: 1;
+			text-shadow: 0 0px 10px #000;
+		}
+		
+		.hero-unit:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			z-index: 0;
+		}
+		
+		
 		
 		@media (max-width:540px) {
 			.hero-unit h1 {
@@ -2108,7 +2145,7 @@ body:after {
                 
                   <li>
                     <a href="http://tumblr.com/follow/{Name}">
-                      {text:Follow Text}
+                      {text:Follow Label}
                     </a>
                   </li>
 
@@ -2118,7 +2155,7 @@ body:after {
                 {block:AskEnabled}
                 
                 <li>
-                  <a href="/ask">{text:Follow Label}</a>
+                  <a href="/ask">{AskLabel}</a>
                 </li>
                 {/block:AskEnabled}
 
@@ -2335,23 +2372,27 @@ body:after {
                 
                 <div class="QUOTEINFO">
                   
-                  <div class="QUOTEMARK"></div>
                   <div class="TEXT">
-                    {Question}
+                    <img src="{AskerPortraitURL-48}">
+                    <div class="question">
+	                    <strong>{lang:Asked by Asker}:</strong>
+	                    {Question}
+                    </div>
+                    
                   </div>
                 
                 </div>
                 
-                <p>{lang:Asked by Asker}</p>
                 
                 <div class="BREAK"></div>
-                
-                <div class="RESPONSE">
-                
-                  {Answer}
-                
+                <div class="RESPONSER">
+	                <img src="{PortraitURL-48}">
+	                <div class="RESPONSE">
+	                <strong>{Title} {lang:Answer}:</strong>
+	                 {Answer}
+	                 
+	                </div>
                 </div>
-
               {/block:Answer}
               
               <!-- /ANSWER -->
@@ -2427,7 +2468,7 @@ body:after {
               
               {block:Panorama}
               
-                <div class="CENTER" style="background-image: url({PhotoURL-500})">
+                <div class="CENTER" style="background-image: url({PhotoURL-Panorama})">
               
                   {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-100}" />{LinkCloseTag}
                   
@@ -2700,7 +2741,7 @@ body:after {
 
     <script src="http://static.tumblr.com/ynbk9vz/nN6neivkz/jquery.min.js"></script>
     <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/1HKm6e0ok/bootstrap.min.js"></script> 
-<script src="http://static.tumblr.com/ynbk9vz/hN4nejdyy/scripts.js"></script>
+<script src="http://static.tumblr.com/ynbk9vz/TdUnekyuj/scripts.js"></script>
     <script>
 	    $(function() {
  $( "#showRightPush" ).click(function() {
@@ -2786,15 +2827,7 @@ $(window).stellar({hideDistantElements: false,positionProperty: 'transfade'});
 });
 
 
-/**
- * photoset-grid - v1.0.1
- * 2014-04-08
- * jQuery plugin to arrange images into a flexible grid
- * http://stylehatch.github.com/photoset-grid/
- *
- * Copyright 2014 Jonathan Moore - Style Hatch
- */
-!function(a,b,c,d){"use strict";function e(b,c){this.element=b,this.options=a.extend({},g,c),this._defaults=g,this._name=f,this.init()}var f="photosetGrid",g={width:"100%",gutter:"0px",highresLinks:!1,lowresWidth:500,rel:"",onInit:function(){},onComplete:function(){}};e.prototype={init:function(){this.options.onInit(),this._setupRows(this.element,this.options),this._setupColumns(this.element,this.options)},_callback:function(a){this.options.onComplete(a)},_setupRows:function(b,c){if(c.layout)this.layout=c.layout;else if(a(b).attr("data-layout"))this.layout=a(b).attr("data-layout");else{for(var d="",e=1,f=0;f<a(b).find("img").length;f++)d+=e.toString();this.layout=d}this.rows=this.layout.split("");for(var g in this.rows)this.rows[g]=parseInt(this.rows[g],10);var h=a(b).find("img"),i=0;a.each(this.rows,function(a,b){var c=i,d=i+b;h.slice(c,d).wrapAll('<div class="photoset-row cols-'+b+'"></div>'),i=d}),a(b).find(".photoset-row:not(:last-child)").css({"margin-bottom":c.gutter})},_setupColumns:function(c,d){var e=this,f=function(e){function f(){var b=a(c).width().toString();b!==a(c).attr("data-width")&&(g.each(function(){var b=a(this).find("img:eq(0)");a(this).find("img").each(function(){var c=a(this);c.attr("height")<b.attr("height")&&(b=a(this)),parseInt(c.css("width"),10)>d.lowresWidth&&c.attr("data-highres")&&c.attr("src",c.attr("data-highres"))});var c=b.attr("height")*parseInt(b.css("width"),10)/b.attr("width"),e=Math.floor(.025*c);a(this).height(c-e),a(this).find("img").each(function(){var b=a(this).attr("height")*parseInt(a(this).css("width"),10)/a(this).attr("width"),d=.5*(c-b)+"px";a(this).css({"margin-top":d})})}),a(c).attr("data-width",b))}var g=a(c).find(".photoset-row"),h=a(c).find("img");d.highresLinks?(h.each(function(){var b;b=a(this).attr(a(this).attr("data-highres")?"data-highres":"src"),a(this).wrapAll('<a href="'+b+'" class="photoset-cell highres-link" />')}),d.rel&&h.parent().attr("rel",d.rel)):h.each(function(){a(this).wrapAll('<div class="photoset-cell" />')});var i=a(c).find(".photoset-cell"),j=a(c).find(".cols-1 .photoset-cell"),k=a(c).find(".cols-2 .photoset-cell"),l=a(c).find(".cols-3 .photoset-cell"),m=a(c).find(".cols-4 .photoset-cell"),n=a(c).find(".cols-5 .photoset-cell");a(c).css({width:d.width}),g.css({clear:"left",display:"block",overflow:"hidden"}),i.css({"float":"left",display:"block","line-height":"0","-webkit-box-sizing":"border-box","-moz-box-sizing":"border-box","box-sizing":"border-box"}),h.css({width:"100%",height:"auto"}),e&&h.each(function(){a(this).attr("height",a(this).height()),a(this).attr("width",a(this).width())}),j.css({width:"100%"}),k.css({width:"50%"}),l.css({width:"33.3%"}),m.css({width:"25%"}),n.css({width:"20%"});var o=parseInt(d.gutter,10);a(c).find(".photoset-cell:not(:last-child)").css({"padding-right":o/2+"px"}),a(c).find(".photoset-cell:not(:first-child)").css({"padding-left":o/2+"px"}),f(),a(b).on("resize",function(){f()})},g=!0,h=!0;a(c).find("img").each(function(){h&=!!a(this).attr("height")&!!a(this).attr("width")}),g=!h,g?a(c).imagesLoaded(function(){f(g),e._callback(c)}):(f(g),e._callback(c))}},a.fn[f]=function(b){return this.each(function(){a.data(this,"plugin_"+f)||a.data(this,"plugin_"+f,new e(this,b))})};var h="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";a.fn.imagesLoaded=function(b){function c(){var c=a(m),d=a(n);i&&(n.length?i.reject(k,c,d):i.resolve(k)),a.isFunction(b)&&b.call(g,k,c,d)}function e(a){f(a.target,"error"===a.type)}function f(b,d){b.src!==h&&-1===a.inArray(b,l)&&(l.push(b),d?n.push(b):m.push(b),a.data(b,"imagesLoaded",{isBroken:d,src:b.src}),j&&i.notifyWith(a(b),[d,k,a(m),a(n)]),k.length===l.length&&(setTimeout(c),k.unbind(".imagesLoaded",e)))}var g=this,i=a.isFunction(a.Deferred)?a.Deferred():0,j=a.isFunction(i.notify),k=g.find("img").add(g.filter("img")),l=[],m=[],n=[];return a.isPlainObject(b)&&a.each(b,function(a,c){"callback"===a?b=c:i&&i[a](c)}),k.length?k.bind("load.imagesLoaded error.imagesLoaded",e).each(function(b,c){var e=c.src,g=a.data(c,"imagesLoaded");return g&&g.src===e?void f(c,g.isBroken):c.complete&&c.naturalWidth!==d?void f(c,0===c.naturalWidth||0===c.naturalHeight):void((c.readyState||c.complete)&&(c.src=h,c.src=e))}):c(),i?i.promise(g):g};var i,j,k,l=a.event,m={_:0},n=0;i=l.special.throttledresize={setup:function(){a(this).on("resize",i.handler)},teardown:function(){a(this).off("resize",i.handler)},handler:function(b,c){var d=this,e=arguments;j=!0,k||(setInterval(function(){n++,(n>i.threshold&&j||c)&&(b.type="throttledresize",l.dispatch.apply(d,e),j=!1,n=0),n>9&&(a(m).stop(),k=!1,n=0)},30),k=!0)},threshold:0}}(jQuery,window,document);
+
     </script>
     
 
@@ -2834,7 +2867,7 @@ $(window).stellar({hideDistantElements: false,positionProperty: 'transfade'});
     {/block:IfDisqusShortname}
     
     {block:ifInstagramUserID}
-    <script src="http://development.spinaestudio.com/static/instafeed.min.js"></script>
+    <script src="http://static.tumblr.com/ynbk9vz/JNZnekysv/instafeed.js"></script>
     <script type="text/javascript">
     	
 	    var feed = new Instafeed({
@@ -2845,7 +2878,7 @@ $(window).stellar({hideDistantElements: false,positionProperty: 'transfade'});
 	    });
 	    feed.run();
 	</script>
-	{/block:instagramUserID}
+	{/block:ifInstagramUserID}
 	
   </body> 
 </html>
