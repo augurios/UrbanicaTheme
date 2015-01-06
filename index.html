@@ -17,7 +17,8 @@
     <meta name="if:Snow Mode" content="0" />
     <meta name="if:Show Following" content="0" />
     
-    <meta name="font:Body" content="'Source Sans Pro'"/>
+    <meta name="font:Headings" content="'Source Sans Pro'"/>
+    <meta name="font:Body" content="'Helvetica Neue'"/>
     <meta name="color:Text" content="#357BD3"/>
     <meta name="color:Photo" content="#34888B"/>
     <meta name="color:Photoset" content="#DE4F20"/>
@@ -280,14 +281,18 @@ body:after {
       body { 
         /* padding-top: 60px; room for fixed nav-bar */
         background-image: url(http://static.tumblr.com/ynbk9vz/9TMnczpr8/stardust.png); 
-        font-family: {font:body};
-        font-size: 16px;
-        line-height: 24px;
+        font-family: {font:body}, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 23px;
         font-weight: 200;
       } 
       
       body.white {
 	      background-image: url(http://static.tumblr.com/ynbk9vz/cR7ne9zf8/stardust-inv.png);
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+	       font-family: {font:headings}, Helvetica, Arial, sans-serif;
       }
       
       {block:IfBackgroundImage}
@@ -1263,6 +1268,10 @@ body:after {
 			width: 100%;
 		}
 		
+		.text .post-meta {
+			padding-top: 12px;
+		}
+		
 		.page .text .entry, .custom .text .entry {
 			text-align: left;
 			display: block;
@@ -1302,11 +1311,12 @@ body:after {
 		}
 		
 		.caption {
-			position: relative;
-			max-height: 52px;
-			min-height: 30px;
-			padding-bottom: 11px;
-			overflow: hidden;
+			  position: relative;
+			  max-height: 40px;
+			  min-height: 30px;
+			  padding-bottom: 11px;
+			  overflow: hidden;
+			  margin-bottom: 12px;
 		}
 		
 		.page .caption {
@@ -1406,8 +1416,8 @@ body:after {
 		
 		.photo .post-meta, .photoset .post-meta, .video .post-meta, .link .post-meta, .audio .post-meta, .panorama .post-meta {
 			height: 114px;
-			padding-top: 10px;
-			background-image: url(http://static.tumblr.com/ynbk9vz/ap6nczwo2/block-bg.png); 	
+			padding-top: 12px;
+			background-image: url(http://static.tumblr.com/ynbk9vz/pTMnhqa94/block-bg.png); 	
 			background-repeat: repeat-x; 
 			background-position: top center;
 		}
