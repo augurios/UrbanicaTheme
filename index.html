@@ -2127,141 +2127,6 @@ body:after {
 		}
 		     		
 	{CustomCSS}	
-	
-	
-	.switch {
-  position: relative;
-  margin: 20px auto;
-  height: 26px;
-  width: 120px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-}
-
-.switch-label {
-  position: relative;
-  z-index: 2;
-  float: left;
-  width: 58px;
-  line-height: 26px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-  cursor: pointer;
-}
-.switch-label:active {
-  font-weight: bold;
-}
-
-.switch-label-off {
-  padding-left: 2px;
-}
-
-.switch-label-on {
-  padding-right: 2px;
-}
-
-/*
- * Note: using adjacent or general sibling selectors combined with
- *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
- *       See this article for more info and a potential fix:
- *       http://css-tricks.com/webkit-sibling-bug/
- */
-.switch-input {
-  display: none;
-}
-.switch-input:checked + .switch-label {
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.65);
-  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
-  -webkit-transition: 0.15s ease-out;
-  -moz-transition: 0.15s ease-out;
-  -o-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-.switch-input:checked + .switch-label-on ~ .switch-selection {
-  left: 60px;
-  /* Note: left: 50% doesn't transition in WebKit */
-}
-
-.switch-selection {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 2px;
-  left: 2px;
-  width: 58px;
-  height: 22px;
-  background: #65bd63;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
-  background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
-  background-image: -o-linear-gradient(top, #9dd993, #65bd63);
-  background-image: linear-gradient(to bottom, #9dd993, #65bd63);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-  -webkit-transition: left 0.15s ease-out;
-  -moz-transition: left 0.15s ease-out;
-  -o-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out;
-}
-.switch-blue .switch-selection {
-  background: #3aa2d0;
-  background-image: -webkit-linear-gradient(top, #4fc9ee, #3aa2d0);
-  background-image: -moz-linear-gradient(top, #4fc9ee, #3aa2d0);
-  background-image: -o-linear-gradient(top, #4fc9ee, #3aa2d0);
-  background-image: linear-gradient(to bottom, #4fc9ee, #3aa2d0);
-}
-.switch-yellow .switch-selection {
-  background: #c4bb61;
-  background-image: -webkit-linear-gradient(top, #e0dd94, #c4bb61);
-  background-image: -moz-linear-gradient(top, #e0dd94, #c4bb61);
-  background-image: -o-linear-gradient(top, #e0dd94, #c4bb61);
-  background-image: linear-gradient(to bottom, #e0dd94, #c4bb61);
-}
-
-.tool-toggle {
-	position: fixed;
-	top: 100px;
-	left: -145px;
-	background-color: rgba(0,0,0,0.4);
-	padding: 12px;
-	color: #eee;
-	text-align: center;
-	text-transform: uppercase;
-	-webkit-border-radius: 0px 6px 6px 0px;
-	border-radius: 0px 6px 6px 0px;
-	-webkit-transition: left .3s ease-in-out;
-	-moz-transition: left .3s ease-in-out;
-	-ms-transition: left .3s ease-in-out;
-	-o-transition: left .3s ease-in-out;
-	transition: left .3s ease-in-out;
-	z-index: 7000;
-}
-
-.tool-toggle:hover {
-	left: 0;
-}
-
-.tool-toggle:after {
-	content: "\f013";
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	position: absolute;
-	background-color: rgba(0,0,0,0.4);
-	padding: 8px 8px 8px 6px;
-	-webkit-border-radius: 0px 6px 6px 0px;
-	border-radius: 0px 6px 6px 0px;
-	top: 10%;
-	right: -28px;
-}
 		
       
     </style> 
@@ -2405,9 +2270,7 @@ body:after {
 			
 			 <h2 class="sidebar-title">Instagram</h2>
 		
-			 <div class="photo-feed">
-	                  <div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/oliverdionela/6206101370/"><img src="http://farm7.staticflickr.com/6166/6206101370_ca62691b85_s.jpg" alt="Una foto de Flickr" title="Malumpati Cold Spring" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/oliverdionela/6205580533/"><img src="http://farm7.staticflickr.com/6175/6205580533_6fdd6a721d_s.jpg" alt="Una foto de Flickr" title="Crossing Fullon" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/oliverdionela/6205577593/"><img src="http://farm7.staticflickr.com/6154/6205577593_a7ff03e2ff_s.jpg" alt="Una foto de Flickr" title="Alex Lieberman Sports Complex" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/oliverdionela/6206086632/"><img src="http://farm7.staticflickr.com/6179/6206086632_632984a802_s.jpg" alt="Una foto de Flickr" title="Boracay" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/oliverdionela/6206083020/"><img src="http://farm7.staticflickr.com/6156/6206083020_347948153c_s.jpg" alt="Una foto de Flickr" title="The Dominican Sisters Mother House Chapel" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/oliverdionela/6206079060/"><img src="http://farm7.staticflickr.com/6176/6206079060_7276296520_s.jpg" alt="Una foto de Flickr" title="To San Jose/To Sibalom" height="75" width="75"></a></div><span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&amp;t=28bbefff9390fdc1233421073181e48d&amp;r=http%3A%2F%2Furbanicatheme.tumblr.com%2F&amp;fl_ev=0&amp;lang=es&amp;intl=us" width="0" height="0" alt=""></span>
-	               </div>
+			 <div id="instafeed"></div>
 			 
 		</div>
 		
@@ -2869,18 +2732,6 @@ body:after {
     
     </div>
     
-    <div class="tool-toggle">
-    	<span>Switch style</span>
-    	<div class="switch">
-	      <input type="radio" class="switch-input" name="view" value="week" id="week" checked="">
-	      <label for="week" class="switch-label switch-label-off">Dark</label>
-	      <input type="radio" class="switch-input" name="view" value="month" id="month">
-	      <label for="month" class="switch-label switch-label-on">Snow</label>
-	      <span class="switch-selection"></span>
-	    </div>
-    </div>
-    
-    
     {block:IfGoogleAnalyticsUACode}
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -2911,10 +2762,6 @@ body:after {
 	 $( ".pushedLeft .pusher>.hero-unit,.pushedLeft .pusher>.container" ).click(function() {
 		 	$( "body" ).removeClass( "pushedLeft" );
 		  
-		});
-		
-		$( ".tool-toggle .switch-input" ).change(function() {
-		  $( "body" ).toggleClass( "white" );
 		});
 	
     
