@@ -278,14 +278,41 @@ body:after {
   opacity: 1;
 } 
       /* --- high-level --- */
-      body { 
-        /* padding-top: 60px; room for fixed nav-bar */
-        background-image: url(http://static.tumblr.com/ynbk9vz/9TMnczpr8/stardust.png); 
-        font-family: {font:body}, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 23px;
-        font-weight: 200;
-      } 
+         
+
+	body {
+	  background-image: url(http://static.tumblr.com/ynbk9vz/9TMnczpr8/stardust.png);
+	  font-family: {font:body}, Helvetica, Arial, sans-serif;
+	  font-weight: 400;
+	  font-size: 14px;
+	  line-height: 23px;
+	  color: #333;
+	}
+	
+	p {margin-bottom: 12px;}
+	
+	 h1, h2, h3, h4, h5, h6 {
+	       font-family: {font:headings}, Helvetica, Arial, sans-serif;
+      }
+	
+	h1, h2, h3, h4 {
+	  margin: 1.414em 0 0.5em;
+	  font-weight: inherit;
+	  line-height: 1.2;
+	}
+	
+	h1 {
+	  margin-top: 0;
+	  font-size: 6.854em;
+	}
+	
+	h2 {font-size: 4.236em;}
+	
+	h3 {font-size: 2.618em;}
+	
+	h4 {font-size: 1.618em;}
+	
+	small, .font_small {font-size: 0.618em;}
       
       body.white {
 	      background-image: url(http://static.tumblr.com/ynbk9vz/cR7ne9zf8/stardust-inv.png);
@@ -319,7 +346,9 @@ body:after {
 	      text-decoration: none;
       }
       
-      
+      blockquote p {
+	      font-size: 14px;
+      }
       
       
       @media (max-width:991px) {
@@ -339,12 +368,11 @@ body:after {
       .tag { margin-bottom: 5px;}
       
       .page .tags {
-	     margin-bottom: 5px;
-		 padding-bottom: 30px;
+	     margin-bottom: 12px;
       }
       
       /* --- entry --- */
-      .entry { background-color: #343333; padding-top: 20px; padding-bottom: 20px; position: relative; height: 336px; overflow: hidden; background-image: url(http://static.tumblr.com/ynbk9vz/ap6nczwo2/block-bg.png); background-repeat: repeat-x; background-position: top center; }
+      .entry { background-color: #343333; padding-top: 20px;  position: relative;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               overflow: hidden; background-image: url(http://static.tumblr.com/ynbk9vz/ap6nczwo2/block-bg.png); background-repeat: repeat-x; background-position: top center; }
       .white .entry {
 	      background-color:#cbcccc ;
 	      background-image: url(http://static.tumblr.com/ynbk9vz/J6Ene9zqp/block-bg-inv.png);
@@ -689,6 +717,8 @@ body:after {
 			border-top: 3px solid #bbb;
 			border-bottom: 3px solid #bbb;
 			margin-bottom: 12px;
+			font-size: 24px;
+			line-height: 36px;
 		}
 		
 		.white .sidebar-title, .white .page-title h2 {
@@ -933,6 +963,7 @@ body:after {
 		
 		.video .POST iframe {
 			height: 450px;
+			margin-bottom: -7px;
 		}
 		
 		.video .spotify_audio_player {
@@ -942,7 +973,6 @@ body:after {
 		
 		.block {
 			width: 31.6%;
-			height: 467px;
 			float: left;
 			overflow: hidden;
 			margin-bottom: 24px;
@@ -1179,7 +1209,7 @@ body:after {
 			background-color: #6FC945;
 			left: 50%;
 			margin-left: -16px;
-			bottom: -32px;
+			bottom: -40px;
 			font-size: 47px;
 			line-height: 31px;
 			-webkit-transition:
@@ -1192,7 +1222,8 @@ body:after {
 			 bottom 0.3s ease-out;
 			transition:
 			 bottom 0.3s ease-out;
-			 text-align: center
+			 text-align: center;
+			 padding: 0 4px 8px;
 		}
 		
 		.photo .perma {
@@ -1249,6 +1280,10 @@ body:after {
 			border-color: {color:Photo};
 		}
 		
+		.photo .CENTER {
+			height: 336px;
+		}
+		
 		.photo .reblogged:before, .photo .reblogged:after {
 			border-top-color: {color:Photo};
 		}
@@ -1269,7 +1304,7 @@ body:after {
 		}
 		
 		.text .post-meta {
-			padding-top: 12px;
+			padding-bottom: 24px;
 		}
 		
 		.page .text .entry, .custom .text .entry {
@@ -1284,23 +1319,11 @@ body:after {
 		}
 		
 		.text .POST {
-			height: 100%;
 			overflow: hidden;
 			position: relative;
-			padding-bottom: 2em;
-			max-height: 297px;
-			display: table;
-			vertical-align: middle;
-			width: inherit;
 			padding-left: 0;
 			padding-right: 0;
-		}
-		
-		.verticaly-center {
-			display: table-cell;
-			width: inherit;
-			vertical-align: middle;
-		}
+		}	
 		
 		.text .POST .verticaly-center {
 			padding: 0 12px;
@@ -1311,21 +1334,17 @@ body:after {
 		}
 		
 		.caption {
-			position: relative;
-			  max-height: 40px;
-			  min-height: 30px;
-			  padding-bottom: 11px;
+			  position: relative;
 			  overflow: hidden;
-			  margin-bottom: 12px;
+			  margin-bottom: 0px;
 		}
 		
 		.page .caption {
 			max-height: none;
 			margin-bottom: 5px;
-			padding-bottom: 24px;
 		}
 		
-		.text .entry:after, .caption:after {
+		/*.text .entry:after, .caption:after {
 			display: block;
 			content: "";
 			position: absolute; 
@@ -1337,7 +1356,7 @@ body:after {
 		    background-image: -o-linear-gradient(rgba(52, 51, 51, 0) 0%, rgba(52, 51, 51, 1) 95%);
 		    background-image: linear-gradient(rgba(52, 51, 51, 0) 0%, rgba(52, 51, 51, 1) 95%);
 		    background-image: -ms-linear-gradient(rgba(52, 51, 51, 0) 0%, rgba(52, 51, 51, 1) 95%);
-		}
+		}*/
 		
 		.white .text .entry:after, .white .caption:after {
 			background: 
@@ -1406,8 +1425,10 @@ body:after {
 		
 		.post-meta {
 			background-color: #343333;
-			height: 86px;
-			padding: 0 12px;
+			padding: 0 12px 24px;
+			margin-bottom: 7px;
+			min-height: 12px;
+			
 		}
 		
 		.white .post-meta {
@@ -1415,9 +1436,9 @@ body:after {
 		}
 		
 		.photo .post-meta, .photoset .post-meta, .video .post-meta, .link .post-meta, .audio .post-meta, .panorama .post-meta {
-			height: 114px;
+			/*height: 114px;*/
 			padding-top: 12px;
-			background-image: url(http://static.tumblr.com/ynbk9vz/pTMnhqa94/block-bg.png);			
+			background-image: url(http://static.tumblr.com/ynbk9vz/pTMnhqa94/block-bg.png); 	
 			background-repeat: repeat-x; 
 			background-position: top center;
 		}
@@ -1461,7 +1482,6 @@ body:after {
 		.page.page.page .post-meta {
 			background-image: none;
 			height: auto;
-			min-height: 72px;
 			margin-bottom: 5px;
 		}
 		
@@ -1473,6 +1493,7 @@ body:after {
 			display: table;
 			width: 101%;
 			table-layout: fixed;
+			padding: 32px 0;
 		}
 		
 		.link .POST {
@@ -1508,7 +1529,6 @@ body:after {
 		}
 		
 		.link .link_og_blockquote {
-			margin: 0;
 			padding: 0;
 			border: 0;
 		} 
@@ -1553,8 +1573,7 @@ body:after {
 			width: 100%;
 			vertical-align: middle;
 			text-align: center;
-			padding-left: 0px;
-			padding-right: 0px;
+			padding: 24px 0px;
 		}
 		
 		.quote .POST > div {
@@ -1805,11 +1824,15 @@ body:after {
 		
 		.audio .POST iframe {
 			width: 100%;
-			height: 80px;
+			height: 300px;
 		}
 		
 		.index .audio .POST .soundcloud_audio_player {
-			height: 180px;
+			height: 300px;
+		}
+		
+		.index .audio .POST .spotify_audio_player {
+			height: 80px;
 		}
 		
 		.page .audio .POST iframe {
@@ -1820,12 +1843,20 @@ body:after {
 			height: 400px;
 		}
 		
-		.audio .entry {
-			height: 80px;
+		.TRACK {
+		  font-size: 16px;
+		  line-height: 24px;
+		  margin-bottom: 4px;
+		}
+		
+		.COUNT {
+		  font-size: 11px;
+		  line-height: 12px;
+		  margin-bottom: 12px;
 		}
 		
 		.audio .caption {
-			max-height: 120px;
+			
 		}
 		
 		.page .audio .entry {
@@ -1833,7 +1864,7 @@ body:after {
 		}
 		
 		.audio .post-meta {
-			height: 370px;
+			
 		}
 		
 		.audio .date>a:before {
