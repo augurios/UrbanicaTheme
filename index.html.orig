@@ -17,8 +17,8 @@
     <meta name="if:Snow Mode" content="0" />
     <meta name="if:Show Following" content="0" />
     
-    <meta name="font:Headings" content="'Source Sans Pro'"/>
-    <meta name="font:Body" content="'Helvetica Neue'"/>
+    <meta name="font:Headings" content="'Helvetica Neue'"/>
+    <meta name="font:Body" content="'Capita'"/>
     <meta name="color:Text" content="#357BD3"/>
     <meta name="color:Photo" content="#34888B"/>
     <meta name="color:Photoset" content="#DE4F20"/>
@@ -64,7 +64,7 @@
     <!-- Font Awesome - http://fortawesome.github.com/Font-Awesome  -->
     <link href="http://static.tumblr.com/ynbk9vz/WlYnehfm4/font-awesome.css" rel="stylesheet">
 	
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/capita/stylesheet.css?v=1">
  
     <style type="text/css">
     /* Preload images */
@@ -278,21 +278,11 @@ body:after {
   opacity: 1;
 } 
       /* --- high-level --- */
-<<<<<<< HEAD
-      body { 
-        /* padding-top: 60px; room for fixed nav-bar */
-        background-image: url(http://static.tumblr.com/ynbk9vz/9TMnczpr8/stardust.png); 
-        font-family: {font:body}, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 23px;
-        font-weight: 200;
-      } 
-=======
          
 
 	body {
 	  background-image: url(http://static.tumblr.com/ynbk9vz/9TMnczpr8/stardust.png);
-	  font-family: {font:body}, Helvetica, Arial, sans-serif;
+	  font-family: {font:body};
 	  font-weight: 400;
 	  font-size: 14px;
 	  line-height: 23px;
@@ -302,40 +292,19 @@ body:after {
 	p {margin-bottom: 12px;}
 	
 	 h1, h2, h3, h4, h5, h6 {
-	       font-family: {font:headings}, Helvetica, Arial, sans-serif;
+	       font-family: {font:headings};
       }
 	
-	h1, h2, h3, h4 {
-	  margin: 1.414em 0 0.5em;
-	  font-weight: inherit;
-	  line-height: 1.2;
-	}
-	
-	h1 {
-	  margin-top: 0;
-	  font-size: 6.854em;
-	}
-	
-	h2 {font-size: 4.236em;}
-	
-	h3 {font-size: 2.618em;}
-	
-	h4 {font-size: 1.618em;}
 	
 	small, .font_small {font-size: 0.618em;}
->>>>>>> refs/heads/premium
       
       body.white {
 	      background-image: url(http://static.tumblr.com/ynbk9vz/cR7ne9zf8/stardust-inv.png);
       }
       
-<<<<<<< HEAD
       h1, h2, h3, h4, h5, h6 {
 	       font-family: {font:headings}, Helvetica, Arial, sans-serif;
       }
-=======
-     
->>>>>>> refs/heads/premium
       
       {block:IfBackgroundImage}
       body {
@@ -379,8 +348,13 @@ body:after {
       }
       
       /* --- tags --- */
-      .tags { margin-bottom: 10px;max-height: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-      .tag { margin-bottom: 5px;}
+<<<<<<< HEAD
+      .tags { margin-bottom: 10px;max-height: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;  opacity: 0.7;}
+=======
+      .tags { margin-bottom: 10px;max-height: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; opacity: 0.7}
+>>>>>>> refs/heads/premium
+      .tag { margin-bottom: 5px; font-size: 13px;
+}
       
       .page .tags {
 	     margin-bottom: 12px;
@@ -393,7 +367,7 @@ body:after {
 	      background-image: url(http://static.tumblr.com/ynbk9vz/J6Ene9zqp/block-bg-inv.png);
       }
       .entry > * { padding-left: 12px; padding-right: 12px; }
-      .date { margin-bottom: 10px; position: absolute;bottom: -5px;font-size: 12px;}
+      .date { margin-bottom: 10px; position: absolute;bottom: -5px;font-size: 12px;font-family: {font:headings};}
       .date.date>a { color:#6FC945; }
       .entry .title { margin-bottom: 10px; }
       .entry h2:first-of-type { margin-top: 0; }
@@ -1319,11 +1293,7 @@ body:after {
 		}
 		
 		.text .post-meta {
-<<<<<<< HEAD
-			padding-top: 12px;
-=======
 			padding-bottom: 24px;
->>>>>>> refs/heads/premium
 		}
 		
 		.page .text .entry, .custom .text .entry {
@@ -1353,18 +1323,9 @@ body:after {
 		}
 		
 		.caption {
-<<<<<<< HEAD
-			position: relative;
-			  max-height: 40px;
-			  min-height: 30px;
-			  padding-bottom: 11px;
-			  overflow: hidden;
-			  margin-bottom: 12px;
-=======
 			  position: relative;
 			  overflow: hidden;
 			  margin-bottom: 0px;
->>>>>>> refs/heads/premium
 		}
 		
 		.page .caption {
@@ -1464,15 +1425,9 @@ body:after {
 		}
 		
 		.photo .post-meta, .photoset .post-meta, .video .post-meta, .link .post-meta, .audio .post-meta, .panorama .post-meta {
-<<<<<<< HEAD
-			height: 114px;
-			padding-top: 12px;
-			background-image: url(http://static.tumblr.com/ynbk9vz/pTMnhqa94/block-bg.png);			
-=======
 			/*height: 114px;*/
 			padding-top: 12px;
 			background-image: url(http://static.tumblr.com/ynbk9vz/pTMnhqa94/block-bg.png); 	
->>>>>>> refs/heads/premium
 			background-repeat: repeat-x; 
 			background-position: top center;
 		}
@@ -1528,6 +1483,10 @@ body:after {
 			width: 101%;
 			table-layout: fixed;
 			padding: 32px 0;
+		}
+		
+		.THE-LINK {
+			font-family: {font:headings};
 		}
 		
 		.link .POST {
@@ -1808,7 +1767,7 @@ body:after {
 		.chat .CHAT {
 			list-style: none;
 			padding: 0;
-			margin: 0;
+			margin: 0 0 12px 0;
 		}
 		
 		.page .chat .CHAT {
@@ -1820,7 +1779,11 @@ body:after {
 		}
 		
 		.chat strong{
-			color: #999;
+			color: #A09F9F;
+		}
+		
+		.white .chat strong{
+			color: #111;
 		}
 		
 		.chat-notes a {
@@ -1881,12 +1844,14 @@ body:after {
 		  font-size: 16px;
 		  line-height: 24px;
 		  margin-bottom: 4px;
+		  font-family: {font:headings};
 		}
 		
 		.COUNT {
 		  font-size: 11px;
 		  line-height: 12px;
 		  margin-bottom: 12px;
+		  font-family: {font:headings};
 		}
 		
 		.audio .caption {
@@ -1920,6 +1885,7 @@ body:after {
 			line-height: 1.5;
 			margin-bottom: 4px;
 			font-style: italic;
+			font-family: {font:headings};
 		}
 		
 		.answer img {
@@ -1929,6 +1895,7 @@ body:after {
 		
 		.answer .question > strong, .answer .RESPONSE > strong {
 			display: block;
+			font-family: {font:headings};
 		}
 		
 		.page .QUOTEINFO .TEXT {
@@ -1954,7 +1921,7 @@ body:after {
 			top: 0px;
 			right: 10%;
 			background-color: #6FC945;
-			color: #ddd;
+			color: #fff;
 		}
 		
 		.page .reblogged {
@@ -1990,7 +1957,7 @@ body:after {
 		}
 		
 		.reblogged.reblogged.reblogged a {
-			color: #ddd;
+			color: #fff;
 		}
 		
 		.reblogged.reblogged.reblogged a:hover {
